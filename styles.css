@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2a9d8f;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    color: #ddd;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.add-btn:hover {
+    background-color: #1f7769;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #f4f4f4;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.blue {
+    background-color: #3b82f6;
+}
+
+.btn.green {
+    background-color: #10b981;
+}
+
+.btn.yellow {
+    background-color: #facc15;
+}
+
+.btn.red {
+    background-color: #ef4444;
+}
+
+/* Kalender Styles */
+.chart-calendar-container {
+    display: flex;
+    flex-direction: column; /* Kalender akan berada di bawah grafik */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    float: right;
+}
+
+.month {
+    padding: 20px 25px;
+    background-color: #2a9d8f;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    list-style: none;
+}
+
+.month .prev, .month .next {
+    float: left;
+    padding-top: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.month .next {
+    float: right;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: grid; /* Agar baris hari-hari berada sejajar secara horizontal */
+    grid-template-columns: repeat(7, 1fr);
+    text-align : center;
+    justify-content: space-between; /* Distribusikan elemen dengan jarak yang sama */
+}
+
+.weekdays li {
+    flex: 1; /* Setiap elemen weekdays mengambil ruang yang sama */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.days {
+    padding: 10px 0;
+    background-color: #f4f4f9;
+    margin: 0;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Membuat 7 kolom dengan ukuran yang sama */
+    text-align: center;
+}
+
+.days li {
+    flex: 1 0 13.6%; /* Setiap elemen hari akan mengisi sekitar 13.6% lebar kontainer */
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+    padding: 20px 0;
+}
+
+.days li .active {
+    background-color: #2a9d8f;
+    color: white !important;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+li.highlight {
+    background-color: #1abc9c;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Tombol Notifikasi */
+.notification-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.btn-notification {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-notification:hover {
+    background-color: #e6b800;
+}
